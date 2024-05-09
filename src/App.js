@@ -46,8 +46,8 @@ function App() {
       
         <Navbar setshowlogin={setshowlogin}/>
         <Routes>
-          <Route/>
-          <Route path='/' element={<Home handleCarts={handleCarts} carts={carts} handleRemClick={handleRemClick}/>}/>
+          
+          <Route path='' element={<Home handleCarts={handleCarts} carts={carts} handleRemClick={handleRemClick}/>}/>
           <Route path='/Card' element={<Card  handleCarts={handleCarts} handleRemClick={handleRemClick} carts={carts}/>}/>
           <Route path='/order' element={<Placeorder/>}/>
         </Routes>
