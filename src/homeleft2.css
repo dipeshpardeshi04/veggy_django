@@ -1,0 +1,38 @@
+.homeleft2{
+    width: 100%;
+    height: 40%;
+    margin: 10px 0;
+    /* background-color: aqua ; */
+    padding: 1vw;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.leftsub{
+    width: 100%;
+    height: 16vh;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 15px;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-top: 5px;
+    padding: 10px;
+}
+.leftsub img{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+}
+#price{
+    color: rgb(55, 255, 0);
+}
+#sp{
+    color:  rgb(99, 99, 99);
+}
+h2{
+    margin-bottom: 5px;
+}

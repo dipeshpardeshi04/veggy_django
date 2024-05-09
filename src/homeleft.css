@@ -1,0 +1,35 @@
+.homele{
+    width: 100%;
+    height: 58%;
+    /* background-color: aqua ; */
+    padding: 1vw;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 10px;
+    word-wrap: break-word;
+    font-size: 2vw;
+    overflow: scroll;
+    animation: fadeIn 2s;
+    
+    
+}
+.homele .profile{
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, rgb(55, 255, 0) 50%, rgb(55, 255, 0) 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.homele .profile img{
+    width: 50%;
+    height: 80%;
+    border-radius: 100%;
+    border: solid 1px rgb(55, 255, 0);
+    
+}
+.homele::-webkit-scrollbar{
+    display: none;
+}
