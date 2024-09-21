@@ -16,7 +16,7 @@ useEffect(() => {
   const fetchCart = async () => {
     try {
       //add another url
-      const response = await axios.get('http://127.0.0.1:8000/dipesh/', {
+      const response = await axios.get('https://veggy-backend.onrender.com/dipesh/', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,  // assuming token-based authentication
         },
