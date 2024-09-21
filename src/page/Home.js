@@ -50,7 +50,7 @@ function Home({handleCarts,carts,handleRemClick}) {
         const token = localStorage.getItem('token');
         try {
             const response = await axios.post(
-                'http://127.0.0.1:8000/api/add-to-cart/',
+                'https://veggy-backend.onrender.com/api/add-to-cart/',
                 { product_id: productId, quantity: quantity,  },
                 {
                     headers: {
