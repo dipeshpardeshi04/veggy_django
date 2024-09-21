@@ -1,4 +1,4 @@
-import './navbar.css';
+import './styless/navbar.css';
 import { assets } from './assets';
 //import { useState } from 'react';
 import { Link} from 'react-router-dom';

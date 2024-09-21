@@ -1,5 +1,6 @@
 import React from 'react';
-import './homeleft2.css';
+import './styless/homeleft2.css';
+import { assets } from './assets';
 // import { food_list } from './assets';
 // import Leftref from './leftref';
 
@@ -16,7 +17,7 @@ const Homeleft2 = ({cart1}) => {
         <>
       <div className="leftsub">
         
-         <img src={item.image} alt="" /> 
+         <img src={assets.menu_3} alt="" /> 
         <p><span id='sp'>Name :</span> {item.name}</p>
         <p><span id='sp'>Id :</span> {item.id}</p>
         <p><span id='sp'>Qty :</span> {counter}</p>

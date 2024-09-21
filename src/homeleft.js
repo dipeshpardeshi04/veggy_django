@@ -1,6 +1,6 @@
 import React from 'react'
 import { assets } from './assets'
-import './homeleft.css'
+import './styless/homeleft.css'
 const homeleft = () => {
   return (
     <div className='homele'>

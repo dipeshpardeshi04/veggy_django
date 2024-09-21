@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";
+import "./styless/footer.css";
 import { assets } from "./assets.js";
 const footer = () => {
   return (

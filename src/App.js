@@ -1,6 +1,5 @@
 //import logo from './logo.svg';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import './styless/App.css';
 import Navbar from './navbar.js';
 import Home from './page/Home.js';
 import Card from './page/Card.js';
@@ -8,11 +7,14 @@ import Placeorder from './page/Placeorder.js';
 import './index.js';
 import Footer from './footer.js';
 import { useState } from 'react';
+import {Routes, Route} from 'react-router'
 import Loginpopup from './Loginpopup.js';
+import  { Toaster } from 'react-hot-toast';
 function App() {
   const [showlogin,setshowlogin] = useState(false);
   const [carts,setcarts] = useState([]);
   const[counter,setCounter]=useState(0)
+  console.log(counter)
   const handleCarts = (item) => {
     setcarts([...carts,item])
   }
@@ -51,6 +53,7 @@ function App() {
           <Route path='/Card' element={<Card  handleCarts={handleCarts} handleRemClick={handleRemClick} carts={carts}/>}/>
           <Route path='/order' element={<Placeorder/>}/>
         </Routes>
+        <Toaster />
         <Footer/>
        
     </div>
