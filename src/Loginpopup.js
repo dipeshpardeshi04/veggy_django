@@ -46,7 +46,7 @@ const Loginpopup = ({ setshowlogin }) => {
   } else {
     try {
       // const csrfToken = getCsrfToken();  // Get the CSRF token
-      const csrfToken = cookie.get('csrftoken'); // Get CSRF token from cookies
+      // const csrfToken = cookie.get('csrftoken'); // Get CSRF token from cookies
 
       const response = await axios.post('http://127.0.0.1:8000/api/login/', {
         username,
