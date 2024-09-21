@@ -8,8 +8,8 @@ import FooddisplayItem from "./FooddisplayItem.js";
 const Fooddisplay = ({addToCart,category,handleClick,cart1,handleRemoveClick,counter,handleCarts,carts,handleRemClick}) => {
   const { food_list } = useContext(Storecontext);
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
   useEffect(() => {
     // Make the request to the Django endpoint
@@ -18,12 +18,12 @@ const Fooddisplay = ({addToCart,category,handleClick,cart1,handleRemoveClick,cou
         // Handle the response data
         console.log(response.data);
         setData(response.data);
-        setLoading(false);
+        // setLoading(false);
       })
       .catch(error => {
         // Handle errors
-        setError(error);
-        setLoading(false);
+        // setError(error);
+        // setLoading(false);
       });
   }, []);
   return (
