@@ -13,7 +13,7 @@ const Fooddisplay = ({addToCart,category,handleClick,cart1,handleRemoveClick,cou
 
   useEffect(() => {
     // Make the request to the Django endpoint
-    axios.get('http://127.0.0.1:8000/dipesh/') // Adjust URL as needed
+    axios.get('https://veggy-backend.onrender.com/dipesh/') // Adjust URL as needed
       .then(response => {
         // Handle the response data
         console.log(response.data);
