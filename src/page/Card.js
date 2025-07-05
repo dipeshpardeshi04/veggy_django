@@ -4,6 +4,7 @@ import { assets } from "../assets";
 import "./Card.css";
 import toast from "react-hot-toast";
 const Card = () => {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -15,7 +16,7 @@ const Card = () => {
   const fetchCartItems = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/cart/", {
+      const response = await axios.get(`${backendUrl}/api/cart/`, {
         headers: {
           Authorization: `Token ${token}`,
         },
@@ -38,7 +39,7 @@ const Card = () => {
     console.log("Removing item with ID:", itemId);  // Debugging log
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/cart/${itemId}/`, {
+      await axios.delete(`${backendUrl}/api/cart/${itemId}/`, {
         headers: {
           Authorization: `Token ${token}`,
         },

@@ -4,29 +4,30 @@ import { assets } from "./assets";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const FooddisplayItem = ({addToCart, id, prod_name, price, description, image, handleClick, item,handleRemoveClick, cart1,counter,handleCarts,carts,handleRemClick}) => {
+const FooddisplayItem = ({addToCart, id, prod_name, price, description, image, handleClick, item,handleRemoveClick,handleCarts,handleRemClick}) => {
   const [count, setCount] = useState(0);
-  
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 //
-const [cartItems, setCartItems] = useState([]);
-const [loading, setLoading] = useState(true);
+// const [cartItems, setCartItems] = useState([]);//1
+// const [loading, setLoading] = useState(true);//1
 
 // Fetch cart items after user login
 useEffect(() => {
   const fetchCart = async () => {
     try {
       //add another url
-      const response = await axios.get('http://127.0.0.1:8000/dipesh/', {
+      const response = await axios.get(`${backendUrl}/dipesh/`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,  // assuming token-based authentication
         },
       });
-      setCartItems(response.data);
-      setLoading(false);
+      // setCartItems(response.data);//1
+      // setLoading(false);//1
+      console.log(response.data);//1
     } catch (error) {
       console.error('Error fetching cart:', error);
       toast.error('Error fetching cart:', error);
-      setLoading(false);
+      // setLoading(false);//1
     }
   };
 

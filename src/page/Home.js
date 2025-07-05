@@ -10,6 +10,7 @@ import Homel from "../homeleft.js";
 import Homel2 from "../homeleft2.js";
 import toast from "react-hot-toast";
 function Home({handleCarts,carts,handleRemClick}) {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
     const [category,setCategory] = useState("All");
     const[cart1,setCart1]=useState([])
     const[counter,setCounter]=useState(0)
@@ -50,7 +51,7 @@ function Home({handleCarts,carts,handleRemClick}) {
         const token = localStorage.getItem('token');
         try {
             const response = await axios.post(
-                'http://127.0.0.1:8000/api/add-to-cart/',
+                `${backendUrl}/api/add-to-cart/`,
                 { product_id: productId, quantity: quantity,  },
                 {
                     headers: {

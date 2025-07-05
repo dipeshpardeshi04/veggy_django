@@ -7,23 +7,24 @@ import FooddisplayItem from "./FooddisplayItem.js";
 
 const Fooddisplay = ({addToCart,category,handleClick,cart1,handleRemoveClick,counter,handleCarts,carts,handleRemClick}) => {
   const { food_list } = useContext(Storecontext);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [loading, setLoading] = useState(true); //1
+  // const [error, setError] = useState(null);// 1
 
   useEffect(() => {
     // Make the request to the Django endpoint
-    axios.get('http://127.0.0.1:8000/dipesh/') // Adjust URL as needed
+    axios.get(`${backendUrl}/dipesh/`) // Adjust URL as needed
       .then(response => {
         // Handle the response data
         console.log(response.data);
         setData(response.data);
-        setLoading(false);
+        // setLoading(false);//1
       })
       .catch(error => {
         // Handle errors
-        setError(error);
-        setLoading(false);
+        // setError(error);//1
+        // setLoading(false);//1
       });
   }, []);
   return (
